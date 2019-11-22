@@ -1,7 +1,8 @@
 import org.junit.rules.ExternalResource;
 import org.sql2o.*;
+import spark.resource.ExternalResource;
 
-public class DatabaseRule extends Animals {
+public class DatabaseRule extends ExternalResource {
 
     @Override
     protected void before() {
