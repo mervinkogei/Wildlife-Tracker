@@ -4,7 +4,7 @@ import org.sql2o.*;
 import static spark.route.HttpMethod.connect;
 
 public class NonEndangered extends Animals{
-    private NonEndangered(String name){
+    NonEndangered(String name){
         this.name = name;
         endangered = false;
     }
