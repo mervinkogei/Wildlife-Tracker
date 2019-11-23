@@ -2,45 +2,44 @@ import org.sql2o.*;
 
 import java.util.List;
 
-public class Animals {
-    private int id;
-    private String name;
+public abstract class Animals {
+    public int id;
+    public String name;
+    public boolean endangered;
 
-    public Animals (int id, String name){
-        this.id= id;
-        this.name = name;
-    }
-    public int getId(){
+
+
+    public int getId() {
         return id;
     }
-    public String getName(){
+    public String getName() {
         return name;
     }
-
+    public boolean getEndangered(){
+        return endangered;
+    }
     @Override
-    public boolean equals(Object otherAnimals){
-        if (!(otherAnimals instanceof Animals)) {
+    public boolean equals(Object otherAnimal){
+        if(!(otherAnimal instanceof Animals)){
             return false;
-        } else {
-            Animals newAnimals = (Animals) otherAnimals;
-            return this.getName().equals(newAnimals.getName()) &&
-                    this.getName().equals(newAnimals.getName());
+        }
+        else{
+            Animals newAnimal = (Animals) otherAnimal;
+            return this.getName().equals(newAnimal.getName()) &&
+                    this.getId()==(newAnimal.getId());
         }
     }
-
-    public void save() {
-        try(Connection con = DB.sql2o.open()) {
-            String sql = "INSERT INTO Animals (id, name) VALUES (:id, :name)";
-            con.createQuery(sql)
+    public void save(){
+        if (name.equals("") ) {
+            throw new IllegalArgumentException("Please enter a name.");
+        }
+        try(Connection connect = DB.sql2o.open()){
+            String sql = "INSERT INTO animals (name, endangered) VALUES (:name, :endangered);";
+            this.id = (int) connect.createQuery(sql, true)
                     .addParameter("name", this.name)
-                    .addParameter("1", this.id)
-                    .executeUpdate();
-        }
-    }
-    public static List<Animals> all() {
-        String sql = "SELECT * FROM persons";
-        try(Connection con = DB.sql2o.open()) {
-            return con.createQuery(sql).executeAndFetch(Animals.class);
+                    .addParameter("endangered", this.endangered)
+                    .executeUpdate()
+                    .getKey();
         }
     }
 }
