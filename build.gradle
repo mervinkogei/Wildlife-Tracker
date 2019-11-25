@@ -8,6 +8,8 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
+mainClassName = 'Wildlife Tracker'
+
 repositories {
     mavenCentral()
 }
@@ -19,7 +21,7 @@ dependencies {
     compile group: 'org.postgresql', name: 'postgresql', version: '42.2.2'
     compile group: 'postgresql', name: 'postgresql', version: '9.0-801.jdbc4'
     compile "com.sparkjava:spark-core:2.6.0"
-    compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
+//    compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
     compile group: 'com.sparkjava', name: 'spark-template-velocity', version: '2.7.1'
 
 }
