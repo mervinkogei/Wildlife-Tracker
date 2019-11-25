@@ -1,0 +1,68 @@
+.nav-brand img{
+  height: 3rem;
+  border-radius: 50%;
+}
+.navbar-nav li{
+  padding-right: .7rem;
+}
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .nav-link:hover{
+ color: #D30C47;
+}
+
+body{
+background-image: url("/images/savannah.jpg");
+background-size: cover;
+width: 100%;
+height: 100%;
+}
+
+.text-container {
+  background: black;
+  opacity: 0.5;
+  padding: 20px;
+  height: 87vh;
+  width: 100%;
+  position: relative;
+}
+.textarea {
+  background: transparent;
+  color: white;
+  resize: none;
+  border: 0 none;
+  width: 100%;
+  font-size: 1.5rem;
+  outline: none;
+  height: 100%;
+  position: absolute;
+}
+p.textarea{
+color: white;
+opacity: 1;
+}
+.index-right{
+color: white;
+}
+.mylist{
+color: white;
+}
+
+.ul{
+display:table;
+margin:0 auto;
+width: 80%;
+border-radius: 0;
+color: white;
+}
+.align{
+text-align: center;
+}
+.form-left{
+display:table;
+margin:0 auto;
+width: 80%;
+border-radius: 0;
+background: white;
+
+height: 80vh;
+}

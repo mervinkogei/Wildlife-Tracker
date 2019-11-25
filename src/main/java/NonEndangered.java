@@ -4,10 +4,12 @@ import org.sql2o.*;
 import static spark.route.HttpMethod.connect;
 
 public class NonEndangered extends Animals{
+
     NonEndangered(String name){
         this.name = name;
         endangered = false;
     }
+
     public static List<NonEndangered> all(){
         String sql = "SELECT * FROM animals WHERE endangered = false";
         try(Connection con = DB.sql2o.open()) {

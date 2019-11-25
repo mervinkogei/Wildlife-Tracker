@@ -20,7 +20,8 @@ public class Endangered extends Animals{
         this.age = age;
         endangered = true;
     }
-    public String getName(){return name;}
+    public String getName()
+    {return name;}
     public String getHealth(){
         return health;
     }

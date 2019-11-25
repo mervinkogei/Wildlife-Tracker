@@ -7,6 +7,8 @@
         <div class="list-group ul">
             #foreach($notendangered_animal in $nonendangered)
             <a href="" class="list-group-item list-group-item-action list-group-item-dark">$notendangered_animal.getName()</a>
+             <li><a href=""> $$notendangered_animal.getHealth() </a></li>
+            <li><a href=""> $$notendangered_animal.getAge() </a></li>
             #end
         </div>
         #else
@@ -22,8 +24,8 @@
         <div class="list-group ul">
             #foreach($endangered_animal in $endangered)
             <a href="" class="list-group-item list-group-item-action list-group-item-dark"> $endangered_animal.getName() </a>
-<!--            <li><a href=""> $endangered_animal.getHealth() </a></li>-->
-<!--            <li><a href=""> $endangered_animal.getAge() </a></li>-->
+            <li><a href=""> endangered_animal.getHealth() </a></li>
+            <li><a href=""> $endangered_animal.getAge() </a></li>
             #end
         </div>
         #else
