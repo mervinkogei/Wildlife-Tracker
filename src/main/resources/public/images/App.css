@@ -1,3 +1,4 @@
+
 .nav-brand img{
   height: 3rem;
   border-radius: 50%;
@@ -11,10 +12,11 @@
 }
 
 body{
-background-image: url("/images/savannah.jpg");
+background-image: url("/images/background.jpg");
 background-size: cover;
 width: 100%;
 height: 100%;
+color:black;
 }
 
 .text-container {
@@ -62,7 +64,28 @@ display:table;
 margin:0 auto;
 width: 80%;
 border-radius: 0;
-background: white;
 
 height: 80vh;
+}
+.align{
+color:black;
+}
+#home{
+color:orange;
+}
+#location,#rangername,#animal,#name,#endangered,#health,#age {
+background: transparent;
+}
+#mysighting{
+border: 3px  solid white;
+height:100%;
+padding-bottom: 80px;
+}
+:placeholder{
+color:white;
+}
+input::placeholder {
+  color: color;
+  font-size: 1.2em;
+  font-style: italic;
 }

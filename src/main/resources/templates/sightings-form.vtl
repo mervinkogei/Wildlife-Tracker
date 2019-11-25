@@ -3,10 +3,10 @@
     <div class="col col-sm-6">
 
     </div>
-    <div class="col col-sm-6 form-center">
+    <div class="col col-sm-4 form-center" id="mysighting">
         <h3>Add New Sighting</h3>
         <br/>
-    <form action="/sightings/new" method="post">
+    <form action="/sightings/new" method="post" id="sighting">
 
         <div class="form-group">
             <label for="location">Location</label>
@@ -24,7 +24,7 @@
         </div>
 
         <div class="form-group">
-        <select class="custom-select" name="animalid">
+        <select class="custom-select" name="animalid" id="animal">
             #foreach ($animal in $animals)
             <option value="$animal.getId()">
                 $animal.getName()

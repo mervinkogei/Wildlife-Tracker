@@ -7,15 +7,15 @@
     <form action="/animals/new" method="post" >
         <div class="form-group">
         <label for="name">Name of Animal</label>
-            <input class="form-control" type="text" id="name" name="name" placeholder="Animal Name"/>
+            <input class="form-control" type="text" id="name" name="name" required="" placeholder="Animal Name"/>
         </div>
 
-        <input type="checkbox" name="endangered" value="yes"/>
+        <input type="checkbox" name="endangered" value="yes" id="endangered"/>
         <label for="endangered">Is the Species Endangered?</label>
 
         <div class="form-group">
             <label for="health">Health</label>
-            <select class="form-control" name="health">
+            <select class="form-control" name="health" id="health">
                 <option>$HEALTHY</option>
                 <option>$OKAY</option>
                 <option>$ILL</option>
@@ -24,7 +24,7 @@
 
         <div class="form-group">
             <label for="age">Age</label>
-            <select class="form-control" name="age">
+            <select class="form-control" name="age" id="age">
                 <option>$NEWBORN</option>
                 <option>$YOUNG</option>
                 <option>$ADULT</option>
