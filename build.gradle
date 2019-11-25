@@ -24,4 +24,7 @@ dependencies {
 //    compile group: 'org.apache.velocity', name: 'velocity', version: '1.7'
     compile group: 'com.sparkjava', name: 'spark-template-velocity', version: '2.7.1'
 
+    task stage(dependsOn: ['clean', 'installDist'])
+    applicationName = 'Wildlife Tracker'
 }
+
