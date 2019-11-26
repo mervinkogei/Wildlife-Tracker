@@ -1,4 +1,5 @@
 # Compiled source #
+!gradle-wrapper.jar
 ############
 *.com
 *.class
@@ -50,5 +51,3 @@ settings.gradle
 .idea
 .idea/
 
-##########
-!gradle-wrapper.jar
