@@ -8,7 +8,7 @@ version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
-mainClassName = 'Wildlife Tracker'
+mainClassName = 'WildlifeTracker'
 
 repositories {
     mavenCentral()
@@ -25,6 +25,6 @@ dependencies {
     compile group: 'com.sparkjava', name: 'spark-template-velocity', version: '2.7.1'
 
     task stage(dependsOn: ['clean', 'installDist'])
-    applicationName = 'Wildlife Tracker'
+    applicationName = 'WildlifeTracker'
 }
 
